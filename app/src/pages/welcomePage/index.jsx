@@ -14,7 +14,6 @@ import grafIcon from "../../assets/img/grafIcon.png";
 import confirmIcon from "../../assets/img/confirm.png";
 import Footer from "../../components/footer";
 import PollCarrousel from "../../components/carousel";
-import Carousel from '../../components/carousel';
 
 export default function WelcomePage() {
 
@@ -90,7 +89,7 @@ export default function WelcomePage() {
                     <h1 className="title-text-white pt-5 mb-0">Enquetes públicas populares</h1>
                 </Row>
                 <Row style={{height: "700px"}}>
-                    <Carousel current_filter={["TODOS", "all", "#000000"]} />
+                    <PollCarrousel />
                 </Row>
             </section>
             <Footer />

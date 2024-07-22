@@ -11,10 +11,9 @@ import { updatePassword } from '../../services/userServices';
 interface UpdatePasswordModalProps {
     open: boolean;
     onClose: () => void;
-    userId: number; // Adiciona o ID do usuário como prop
 }
 
-function UpdatePasswordModal({ open, onClose, userId }: UpdatePasswordModalProps) {
+function UpdatePasswordModal({ open, onClose }: UpdatePasswordModalProps) {
     const [showCurrentPassword, setShowCurrentPassword] = useState(false);
     const [showNewPassword, setShowNewPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -37,7 +36,7 @@ function UpdatePasswordModal({ open, onClose, userId }: UpdatePasswordModalProps
     const handleUpdate = async () => {
         if (newPassword === confirmPassword) {
             try {
-                await updatePassword({ userId, currentPassword, newPassword }); // Passa o userId
+                await updatePassword({ currentPassword, newPassword });
                 console.log("Senha atualizada com sucesso");
             } catch (error) {
                 console.error("Erro ao atualizar a senha:", error);

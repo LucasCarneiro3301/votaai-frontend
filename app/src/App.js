@@ -18,11 +18,10 @@ function App() {
         <Routes>
             <Route exact path="/" element={<Welcome />}/>
             <Route path="/sobre" element={<AboutPage/>}/>
-            <Route path="/auditoria" element={<AuditPage />}/>
             <Route path="/" element={<ProtectedRoute />}>
                 <Route path="/perfil" element={<ProfileScreen userId={3}/>}/>
                 <Route path="/criar-enquete" element={<CreatePollPage />}/>
-                
+                <Route path="/auditoria" element={<AuditPage />}/>
                 <Route path="/historico" element={<History />}/>
                 <Route path="/home" element={<HomeScreen />}/>
                 <Route path="/search" element={<SearchPage/>}/>
